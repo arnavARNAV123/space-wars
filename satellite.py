@@ -1,0 +1,77 @@
+import turtle
+# from grid import *
+pen = turtle.Turtle()
+pen.color("white")
+pen.shape("turtle")
+screen = turtle.Screen()
+screen.setup(600,600)
+screen.bgcolor("black")
+pen.penup()
+pen.goto(-40,0)
+pen.pendown()
+#top triangle
+pen.fillcolor("orange")
+pen.begin_fill()
+pen.right(-60)
+for i in range(3):
+    pen.forward(80)
+    pen.right(120)
+pen.end_fill()
+# body rectangle
+pen.fillcolor("blue")
+pen.begin_fill()
+pen.left(-150)
+for j in range(2):
+    pen.forward(120)
+    pen.left(90)
+    pen.forward(80)
+    pen.left(90)
+pen.end_fill()
+#wings A
+pen.penup()
+pen.goto(-40,-40)
+pen.pendown()
+pen.right(90)
+pen.fillcolor("lightblue")
+pen.begin_fill()
+for k in range(4):
+    pen.forward(40)
+    pen.left(90)
+pen.penup()
+pen.goto(-80,-40)
+pen.pendown()
+for l in range(4):
+    pen.forward(40)
+    pen.left(90)
+pen.end_fill()
+#wing B
+pen.penup()
+pen.goto(120,-80)
+pen.pendown()
+pen.right(90)
+pen.fillcolor("lightblue")
+pen.begin_fill()
+for m in range(4):
+    pen.forward(40)
+    pen.left(90)
+pen.penup()
+pen.goto(80,-80)
+pen.pendown()
+for n in range(4):
+    pen.forward(40)
+    pen.left(90)
+pen.end_fill()
+#booster
+pen.penup()
+pen.goto(-20,-120)
+pen.pendown()
+pen.right(180)
+pen.fillcolor("red")
+pen.begin_fill()
+for o in range(2):
+    pen.forward(65)
+    pen.left(90)
+    pen.forward(40)
+    pen.left(90)
+pen.end_fill()
+turtle.mainloop()
